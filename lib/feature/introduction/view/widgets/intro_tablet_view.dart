@@ -68,13 +68,11 @@ Widget introTabletView() {
               ),
             ),
             Positioned(
-              child: ClipOval(
-                child: Image.asset(
-                  AppImage.myImage,
-                  width: 400.0,
-                  height: 410.0,
-                  fit: BoxFit.cover,
-                ),
+              child: Image.asset(
+                AppImage.myImage,
+                width: 400.0,
+                height: 410.0,
+                fit: BoxFit.cover,
               ),
             ),
           ],

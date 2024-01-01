@@ -5,6 +5,7 @@ class AppImage {
   static const String splashWithoutBackground =
       'assets/splashnamewithoutBackground.png';
   static const String lottiAnimationForImage = 'assets/imageLotti.json';
+  static const String aboutMe = 'assets/about_me.png';
   static const String myImage = 'assets/myimage-removebg.png';
 
 //image height

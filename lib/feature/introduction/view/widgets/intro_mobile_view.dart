@@ -3,29 +3,25 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:myportfolio/common/constant/app_dimens.dart';
 import 'package:myportfolio/common/constant/app_image.dart';
-import 'package:myportfolio/feature/introduction/view/widgets/common_widgets/intro_text.dart';
+import 'package:myportfolio/feature/introduction/common_widgets/intro_text.dart';
 
 Widget introMobileView() {
   return Padding(
     padding: AppDimens.mainPagePadding,
     child: Stack(
-      alignment: Alignment.center,
       children: [
         Stack(
           alignment: Alignment.center,
           children: [
-            SizedBox(
-              height: Get.height / 2.5,
-              width: Get.width,
-              child: ColorFiltered(
-                colorFilter: const ColorFilter.mode(
-                  Colors.red,
-                  BlendMode.modulate,
-                ),
-                child: Lottie.asset(
-                  AppImage.lottiAnimationForImage,
-                  fit: BoxFit.fitHeight,
-                ),
+            ColorFiltered(
+              colorFilter: const ColorFilter.mode(
+                Colors.red,
+                BlendMode.modulate,
+              ),
+              child: Lottie.asset(
+                height: Get.height / 2.5,
+                fit: BoxFit.cover,
+                AppImage.lottiAnimationForImage,
               ),
             ),
             introText()

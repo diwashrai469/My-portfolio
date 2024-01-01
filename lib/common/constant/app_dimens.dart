@@ -72,7 +72,7 @@ class AppDimens {
   static const double headlineFontSizeSmall = 20;
   static const double headlineFontSizeOther = 22;
   static const double headlineFontSizeMedium = 28;
-  static const double headlineFontSizeLarge = 32;
+  static const double headlineFontSizeLarge = 30;
 
   static const double multiSelectPadding = 8;
 }

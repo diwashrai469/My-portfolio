@@ -12,11 +12,13 @@ class KButton extends StatelessWidget {
   final ButtonSize size;
   final bool isBusy;
   final bool? bordered;
+  final Color? borderColor;
   final Color? backgroundColor, foregroundColor;
   @override
   const KButton({
     required this.child,
     required this.onPressed,
+    this.borderColor,
     this.isBusy = false,
     this.size = ButtonSize.small,
     this.backgroundColor,
@@ -99,7 +101,7 @@ class KButton extends StatelessWidget {
           padding: getPaddingBySize(size),
           shape: RoundedRectangleBorder(
             side: (bordered ?? false)
-                ? const BorderSide(color: Colors.white)
+                ? BorderSide(color: borderColor ?? Colors.white)
                 : BorderSide.none,
             borderRadius: const BorderRadius.all(
               Radius.circular(AppDimens.sboarderRadisCircular),
