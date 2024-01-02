@@ -8,7 +8,7 @@ import 'package:myportfolio/theme/app_theme.dart';
 
 Widget navDesktopView(BuildContext context, NavBarViewModel controller) {
   return Container(
-    padding: const EdgeInsets.symmetric(vertical: 20),
+    padding: const EdgeInsets.symmetric(vertical: 5),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,

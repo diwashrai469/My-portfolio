@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myportfolio/feature/introduction/view/widgets/intro_desktop_view.dart';
-import 'package:myportfolio/feature/introduction/view/widgets/intro_mobile_view.dart';
-import 'package:myportfolio/feature/introduction/view/widgets/intro_tablet_view.dart';
+import 'package:myportfolio/feature/introduction/widgets/intro_desktop_view.dart';
+import 'package:myportfolio/feature/introduction/widgets/intro_mobile_view.dart';
+import 'package:myportfolio/feature/introduction/widgets/intro_tablet_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class IntroductionView extends StatelessWidget {

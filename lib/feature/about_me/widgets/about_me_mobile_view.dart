@@ -29,7 +29,7 @@ Widget aboutMeMobileView() {
         ),
         sHeightSpan,
         Text(
-          " Fluttering my way through pixels to create a touch of magic in every tap.",
+          "Fluttering my way through pixels to create a touch of magic in every tap.",
           textAlign: TextAlign.center,
           style: appTextStyle()?.copyWith(
               fontSize: AppDimens.headlineFontSizeXSmall, color: darkGrey),
@@ -44,7 +44,7 @@ Widget aboutMeMobileView() {
                 bordered: true,
                 backgroundColor: Colors.transparent,
                 child: Text(
-                  "Download CV",
+                  "Download Resume",
                   style: appTextStyle()?.copyWith(
                       color: primaryColor,
                       fontSize: AppDimens.headlineFontSizeSmall1),

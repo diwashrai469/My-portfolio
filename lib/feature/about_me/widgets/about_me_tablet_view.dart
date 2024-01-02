@@ -52,7 +52,7 @@ Widget aboutMeTabletView() {
                       bordered: true,
                       backgroundColor: Colors.transparent,
                       child: Text(
-                        "Download CV",
+                        "Download Resume",
                         style: appTextStyle()?.copyWith(
                             color: primaryColor,
                             fontSize: AppDimens.headlineFontSizeSmall1),

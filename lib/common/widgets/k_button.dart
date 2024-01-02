@@ -110,6 +110,9 @@ class KButton extends StatelessWidget {
         ).copyWith(
           foregroundColor: MaterialStateProperty.resolveWith<Color>(
             (Set<MaterialState> states) {
+              if ((states.contains(MaterialState.hovered))) {
+                return Colors.white;
+              }
               return foregroundColor ?? buttonColor;
             },
           ),
@@ -118,6 +121,8 @@ class KButton extends StatelessWidget {
               if (states.contains(MaterialState.pressed)) {
                 return (backgroundColor ?? Theme.of(context).primaryColor)
                     .withOpacity(0.5);
+              } else if (states.contains(MaterialState.hovered)) {
+                return (primaryColor);
               } else if (states.contains(MaterialState.disabled)) {
                 return (backgroundColor ?? Theme.of(context).primaryColor)
                     .withOpacity(0.5);

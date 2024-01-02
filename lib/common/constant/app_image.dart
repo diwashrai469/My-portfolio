@@ -7,6 +7,13 @@ class AppImage {
   static const String lottiAnimationForImage = 'assets/imageLotti.json';
   static const String aboutMe = 'assets/about_me.png';
   static const String myImage = 'assets/myimage-removebg.png';
+  static const String myskillLotti = 'assets/myskilllotti.json';
+
+  //appicons
+  static const String dynoTeams = 'assets/dynoteams.png';
+  static const String moury = 'assets/moury.png';
+  static const String dynoCrm = 'assets/crm.png';
+  static const String chibiHR = 'assets/chibihr.png';
 
 //image height
   static const double llogoHeight = 130;

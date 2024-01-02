@@ -47,12 +47,13 @@ Widget aboutMeDesktopView() {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   KButton(
+                      foregroundColor: Colors.white,
                       borderColor: primaryColor,
                       size: ButtonSize.large,
                       bordered: true,
                       backgroundColor: Colors.transparent,
                       child: Text(
-                        "Download CV",
+                        "Download Resume",
                         style: appTextStyle()?.copyWith(
                             color: primaryColor,
                             fontSize: AppDimens.headlineFontSizeSmall1),
