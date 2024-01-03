@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myportfolio/feature/about_me/widgets/about_me_desktop_view.dart';
+import 'package:get/get.dart';
+import 'package:myportfolio/feature/about_me/about_me_view_model/about_me_view_model.dart';
 import 'package:myportfolio/feature/about_me/widgets/about_me_mobile_view.dart';
-import 'package:myportfolio/feature/about_me/widgets/about_me_tablet_view.dart';
+import 'package:myportfolio/feature/about_me/widgets/about_me_tablet_and_desktop_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class AboutMeView extends StatelessWidget {
@@ -9,10 +10,13 @@ class AboutMeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout.builder(
-      desktop: (p0) => aboutMeDesktopView(),
-      mobile: (p0) => aboutMeMobileView(),
-      tablet: (p0) => aboutMeTabletView(),
-    );
+    Get.put(AboutMeViewModel());
+    return GetBuilder<AboutMeViewModel>(builder: (controller) {
+      return ScreenTypeLayout.builder(
+        desktop: (p0) => aboutMeTabletAndDesktopView(controller, false),
+        mobile: (p0) => aboutMeMobileView(controller),
+        tablet: (p0) => aboutMeTabletAndDesktopView(controller, true),
+      );
+    });
   }
 }

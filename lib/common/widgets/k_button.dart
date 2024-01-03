@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/common/widgets/k_loading_indicator.dart';
+import 'package:myportfolio/core/base_model/base_model.dart';
 import '../../theme/app_theme.dart';
 import '../constant/app_dimens.dart';
 import '../constant/ui_helpers.dart';
@@ -12,12 +13,14 @@ class KButton extends StatelessWidget {
   final ButtonSize size;
   final bool isBusy;
   final bool? bordered;
+  final void Function(bool)? onHover;
   final Color? borderColor;
   final Color? backgroundColor, foregroundColor;
   @override
   const KButton({
     required this.child,
     required this.onPressed,
+    this.onHover,
     this.borderColor,
     this.isBusy = false,
     this.size = ButtonSize.small,
@@ -96,6 +99,7 @@ class KButton extends StatelessWidget {
             ),
       ),
       child: ElevatedButton(
+        onHover: onHover,
         style: ElevatedButton.styleFrom(
           elevation: 0,
           padding: getPaddingBySize(size),
@@ -156,5 +160,14 @@ class KButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class KbuttomViewModel extends BaseModel {
+  bool ishovered = false;
+
+  changeHoverValue(bool value) {
+    ishovered = value;
+    update();
   }
 }

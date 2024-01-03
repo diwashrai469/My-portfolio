@@ -5,13 +5,15 @@ import 'package:oktoast/oktoast.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(OKToast(
-    child: GetMaterialApp(
-      title: "Diwash rai",
-      debugShowMaterialGrid: false,
-      debugShowCheckedModeBanner: false,
-      theme: AppThemes.light,
-      home: const HomeView(),
+  runApp(
+    OKToast(
+      child: GetMaterialApp(
+        title: "Diwash rai",
+        debugShowMaterialGrid: false,
+        debugShowCheckedModeBanner: false,
+        theme: AppThemes.light,
+        home: const HomeView(),
+      ),
     ),
-  ));
+  );
 }

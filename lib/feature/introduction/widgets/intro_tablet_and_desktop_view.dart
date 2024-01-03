@@ -6,9 +6,12 @@ import 'package:myportfolio/common/constant/app_image.dart';
 import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'package:myportfolio/common/widgets/k_button.dart';
+import 'package:myportfolio/feature/introduction/constant/intro_constant.dart';
+import 'package:myportfolio/feature/navbar/view_model/navbar_view_model.dart';
 import 'package:myportfolio/theme/app_theme.dart';
 
-Widget introTabletView() {
+Widget introTabletAndDesktopView(
+    NavBarViewModel controller, bool istabletView) {
   return Padding(
     padding: AppDimens.mainPagePadding,
     child: Row(
@@ -18,24 +21,29 @@ Widget introTabletView() {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              "Hello,",
+              helloText,
               textAlign: TextAlign.left,
               style: appTextStyle()?.copyWith(
                   color: disabledColor,
-                  fontSize: AppDimens.headlineFontSizeSSmall),
+                  fontSize: istabletView
+                      ? AppDimens.headlineFontSizeSSmall
+                      : AppDimens.headlineFontSizeOther),
             ),
             xsHeightSpan,
             Text(
-              "I'm Diwash",
+              iAmDiwashText,
               style: appTextStyle()?.copyWith(
-                  fontSize: AppDimens.headlineFontSizeSmall1,
+                  fontSize: istabletView
+                      ? AppDimens.headlineFontSizeSmall1
+                      : AppDimens.headlineFontSizeLarge,
                   fontWeight: AppDimens.lfontweight),
             ),
-            xsHeightSpan,
             Text(
-              'Flutter Developer',
+              flutterDeveloperText,
               style: appTextStyle()?.copyWith(
-                fontSize: AppDimens.headlineFontSizeSmall1,
+                fontSize: istabletView
+                    ? AppDimens.headlineFontSizeSmall1
+                    : AppDimens.headlineFontSizeLarge,
               ),
             ),
             mHeightSpan,
@@ -43,10 +51,18 @@ Widget introTabletView() {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 KButton(
-                    size: ButtonSize.medium,
-                    bordered: true,
-                    child: const Text("Know More"),
-                    onPressed: () {}),
+                  size: istabletView ? ButtonSize.medium : ButtonSize.large,
+                  bordered: true,
+                  child: Text(
+                    knowMoreText,
+                    style: appTextStyle()?.copyWith(
+                        fontSize: istabletView
+                            ? AppDimens.headlineFontSizeSSmall
+                            : AppDimens.headlineFontSizeSmall1,
+                        color: Colors.white),
+                  ),
+                  onPressed: () => controller.scrollToSection(1),
+                ),
               ],
             )
           ],
@@ -55,7 +71,7 @@ Widget introTabletView() {
           alignment: Alignment.center,
           children: [
             SizedBox(
-              height: Get.height / 2.5,
+              height: istabletView ? Get.height / 2.5 : Get.height / 2,
               child: ColorFiltered(
                 colorFilter: const ColorFilter.mode(
                   Colors.red,
@@ -68,10 +84,11 @@ Widget introTabletView() {
               ),
             ),
             Positioned(
+              bottom: 0,
               child: Image.asset(
                 AppImage.myImage,
-                width: 400.0,
-                height: 410.0,
+                width: istabletView ? 400.0 : 500.0,
+                height: istabletView ? 410.0 : 480,
                 fit: BoxFit.cover,
               ),
             ),

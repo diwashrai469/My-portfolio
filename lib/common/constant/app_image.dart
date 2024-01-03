@@ -9,6 +9,11 @@ class AppImage {
   static const String myImage = 'assets/myimage-removebg.png';
   static const String myskillLotti = 'assets/myskilllotti.json';
 
+  //social media
+  static String myResume = 'assets/Diwash_Rai.pdf';
+  static String linkin = 'https://www.linkedin.com/in/diwash-rai-4336a6235';
+  static String github = 'https://github.com/diwashrai469';
+
   //appicons
   static const String dynoTeams = 'assets/dynoteams.png';
   static const String moury = 'assets/moury.png';

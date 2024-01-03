@@ -5,7 +5,7 @@ import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'package:myportfolio/feature/project/model/project_model.dart';
 
-Widget projectMobileView({required bool isMobileView}) {
+Widget projectMobileTableAndDesktopView({required bool isMobileView}) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 30),
     child: Column(
@@ -14,7 +14,7 @@ Widget projectMobileView({required bool isMobileView}) {
           "Projects Involved",
           style: appTextStyle()?.copyWith(
             fontWeight: AppDimens.lfontweight,
-            fontSize: AppDimens.headlineFontSizeSmall1,
+            fontSize: AppDimens.headlineFontSizeOther,
           ),
         ),
         mHeightSpan,
@@ -23,7 +23,7 @@ Widget projectMobileView({required bool isMobileView}) {
           children: projectDetails
               .map((data) => Card(
                     margin: EdgeInsets.symmetric(
-                        vertical: 12, horizontal: isMobileView ? 20 : 30),
+                        vertical: 12, horizontal: isMobileView ? 10 : 30),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 20, horizontal: 20),

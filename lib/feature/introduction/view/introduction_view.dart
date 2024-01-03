@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myportfolio/feature/introduction/widgets/intro_desktop_view.dart';
+import 'package:get/get.dart';
 import 'package:myportfolio/feature/introduction/widgets/intro_mobile_view.dart';
-import 'package:myportfolio/feature/introduction/widgets/intro_tablet_view.dart';
+import 'package:myportfolio/feature/introduction/widgets/intro_tablet_and_desktop_view.dart';
+import 'package:myportfolio/feature/navbar/view_model/navbar_view_model.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class IntroductionView extends StatelessWidget {
@@ -9,10 +10,13 @@ class IntroductionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout.builder(
-      desktop: (p0) => introDesktopView(),
-      mobile: (p0) => introMobileView(),
-      tablet: (p0) => introTabletView(),
-    );
+    Get.put(NavBarViewModel());
+    return GetBuilder<NavBarViewModel>(builder: (controller) {
+      return ScreenTypeLayout.builder(
+        desktop: (p0) => introTabletAndDesktopView(controller, false),
+        mobile: (p0) => introMobileView(controller),
+        tablet: (p0) => introTabletAndDesktopView(controller, true),
+      );
+    });
   }
 }

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/common/constant/app_image.dart';
 import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/widgets/k_button.dart';
-import 'package:myportfolio/feature/navbar/view/navbar_view.dart';
+import 'package:myportfolio/feature/navbar/constants/navbar_constants.dart';
 import 'package:myportfolio/feature/navbar/view_model/navbar_view_model.dart';
+import 'package:myportfolio/feature/navbar/widget/common_widgets.dart';
 import 'package:myportfolio/theme/app_theme.dart';
 
 Widget navDesktopView(BuildContext context, NavBarViewModel controller) {
@@ -37,21 +38,23 @@ Widget navDesktopView(BuildContext context, NavBarViewModel controller) {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: kInkwell(
-                            title: navOptionTitle[index],
-                            onHover: (value) {
-                              controller.changeButtonTextColor(value, index);
-                            },
-                            onTap: () {},
-                            style: navTextStyle(context, controller, index)),
+                          title: navOptionTitle[index],
+                          onHover: (value) {
+                            controller.changeButtonTextColor(value, index);
+                          },
+                          onTap: () => controller.onPressNavbarOption(index),
+                          style: navTextStyle(context, controller, index),
+                        ),
                       ),
                     );
                   },
                 ),
                 mWidthSpan,
                 KButton(
-                    size: ButtonSize.medium,
-                    child: const Text("Contact Me"),
-                    onPressed: () {})
+                  size: ButtonSize.medium,
+                  child: const Text(contactMe),
+                  onPressed: () => controller.scrollToSection(4),
+                )
               ],
             ),
           ),

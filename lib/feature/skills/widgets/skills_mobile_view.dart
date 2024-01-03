@@ -5,20 +5,8 @@ import 'package:myportfolio/common/constant/app_image.dart';
 import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'package:myportfolio/common/widgets/k_chip.dart';
+import 'package:myportfolio/feature/skills/constant/skills_view_constant.dart';
 import 'package:myportfolio/theme/app_theme.dart';
-
-List skillsList = [
-  'Flutter',
-  'Dart',
-  'Firebase',
-  'GitHub',
-  'Postman',
-  'HTML',
-  'CSS',
-  'Javascript',
-  'React.js',
-  'Tailwind'
-];
 
 Widget skillsMobileView() {
   return Container(
@@ -27,15 +15,22 @@ Widget skillsMobileView() {
     child: Column(
       children: [
         Text(
-          "My skills",
+          skillsHeadingText,
           style: appTextStyle()?.copyWith(
             fontWeight: AppDimens.lfontweight,
             fontSize: AppDimens.headlineFontSizeSmall1,
           ),
         ),
         mHeightSpan,
-        Lottie.asset(
-          AppImage.myskillLotti,
+        ColorFiltered(
+          colorFilter: const ColorFilter.mode(
+            Colors.red,
+            BlendMode.modulate,
+          ),
+          child: Lottie.asset(
+            AppImage.myskillLotti,
+            fit: BoxFit.fitHeight,
+          ),
         ),
         mHeightSpan,
         Wrap(

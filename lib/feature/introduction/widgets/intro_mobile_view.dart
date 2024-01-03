@@ -3,9 +3,13 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:myportfolio/common/constant/app_dimens.dart';
 import 'package:myportfolio/common/constant/app_image.dart';
-import 'package:myportfolio/feature/introduction/common_widgets/intro_text.dart';
+import 'package:myportfolio/common/constant/ui_helpers.dart';
+import 'package:myportfolio/common/utils/app_text_style.dart';
+import 'package:myportfolio/common/widgets/k_button.dart';
+import 'package:myportfolio/feature/introduction/constant/intro_constant.dart';
+import 'package:myportfolio/feature/navbar/view_model/navbar_view_model.dart';
 
-Widget introMobileView() {
+Widget introMobileView(NavBarViewModel controller) {
   return Padding(
     padding: AppDimens.mainPagePadding,
     child: Stack(
@@ -24,7 +28,50 @@ Widget introMobileView() {
                 AppImage.lottiAnimationForImage,
               ),
             ),
-            introText()
+            Column(
+              children: [
+                Text(
+                  helloText,
+                  style: appTextStyle()?.copyWith(
+                      color: Colors.grey.shade200, fontSize: Get.height / 50),
+                ),
+                xsHeightSpan,
+                Text(
+                  iAmDiwashText,
+                  style: appTextStyle()?.copyWith(
+                      color: Colors.white,
+                      fontSize: Get.height / 45,
+                      fontWeight: AppDimens.lfontweight),
+                ),
+                xsHeightSpan,
+                Text(
+                  flutterDeveloperText,
+                  style: appTextStyle()?.copyWith(
+                    color: Colors.white,
+                    fontSize: Get.height / 45,
+                  ),
+                ),
+                mHeightSpan,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    KButton(
+                      size: ButtonSize.medium,
+                      bordered: true,
+                      child: Text(
+                        knowMoreText,
+                        overflow: TextOverflow.ellipsis,
+                        style: appTextStyle()?.copyWith(
+                          color: Colors.white,
+                          fontSize: Get.height / 60,
+                        ),
+                      ),
+                      onPressed: () => controller.scrollToSection(1),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ],
         ),
         Positioned(
