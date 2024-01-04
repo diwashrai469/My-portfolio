@@ -147,6 +147,7 @@ class KButton extends StatelessWidget {
                     width: getProgressRadiusByButtonSize(size),
                     height: getProgressRadiusByButtonSize(size),
                     child: kLoadingIndicator(
+                      background: Colors.white,
                       strockWidth: getProgressWidthByButtonSize(size),
                       context: context,
                     ),

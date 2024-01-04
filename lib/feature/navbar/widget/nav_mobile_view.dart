@@ -7,18 +7,17 @@ import 'package:myportfolio/common/widgets/k_listile.dart';
 import 'package:myportfolio/feature/navbar/constants/navbar_constants.dart';
 import 'package:myportfolio/feature/navbar/view_model/navbar_view_model.dart';
 import 'package:myportfolio/feature/navbar/widget/common_widgets.dart';
-import 'package:myportfolio/theme/app_theme.dart';
 
 Widget navMobileView(BuildContext context, NavBarViewModel controller) {
   return AppBar(
     backgroundColor: Colors.transparent,
-    leading: InkWell(
-      onTap: () => Scaffold.of(context).openDrawer(),
-      child: const Icon(
-        Icons.menu,
-        color: secondaryColor,
-      ),
-    ),
+    // leading: InkWell(
+    //   onTap: () => Scaffold.of(context).openDrawer(),
+    //   child: const Icon(
+    //     Icons.menu,
+    //     color: secondaryColor,
+    //   ),
+    // ),
     title: fulllname(),
     centerTitle: true,
   );

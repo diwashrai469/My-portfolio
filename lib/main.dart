@@ -1,12 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/feature/home/view/home_view.dart';
+import 'package:myportfolio/firebase_options.dart';
 import 'package:myportfolio/theme/app_theme.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     OKToast(
+      position: ToastPosition.top,
       child: GetMaterialApp(
         title: "Diwash rai",
         debugShowMaterialGrid: false,

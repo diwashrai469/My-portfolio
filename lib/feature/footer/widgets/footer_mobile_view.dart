@@ -42,7 +42,7 @@ Widget footerMobileView() {
         ),
         sHeightSpan,
         Text(
-          "Made with Flutter",
+          "Made with Flutter and Firebase",
           style: appTextStyle()?.copyWith(color: Colors.grey.shade500),
         ),
       ],
