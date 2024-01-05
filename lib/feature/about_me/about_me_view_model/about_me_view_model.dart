@@ -1,8 +1,6 @@
+import 'dart:html';
+
 import 'package:myportfolio/core/base_model/base_model.dart';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
-import 'dart:io';
-import 'dart:async';
 
 class AboutMeViewModel extends BaseModel {
   bool isHovered = false;
@@ -12,11 +10,17 @@ class AboutMeViewModel extends BaseModel {
     update();
   }
 
-  Future<void> downloadFile(String url, String filename) async {
-    var request = await http.get(Uri.parse(url));
-    final bytes = request.bodyBytes;
-    String dir = (await getApplicationDocumentsDirectory()).path;
-    File file = File('$dir/$filename');
-    await file.writeAsBytes(bytes);
+  // Future<void> downloadFile(String url, String filename) async {
+  //   var request = await http.get(Uri.parse(url));
+  //   final bytes = request.bodyBytes;
+  //   String dir = (await getApplicationDocumentsDirectory()).path;
+  //   File file = File('$dir/$filename');
+  //   await file.writeAsBytes(bytes);
+  // }
+
+  downloadFile(url) {
+    AnchorElement anchorElement = AnchorElement(href: url);
+    anchorElement.download = "Diwash Rai CV";
+    anchorElement.click();
   }
 }

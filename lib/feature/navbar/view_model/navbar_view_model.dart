@@ -44,13 +44,13 @@ class NavBarViewModel extends BaseModel {
     if (index == 0) {
       scrollPosition = 0.0;
     } else if (index == 1) {
-      scrollPosition = 450.0 * index;
+      scrollPosition = 290.0 * index;
     } else if (index == 2) {
       scrollPosition = 400.0 * index;
     } else if (index == 3) {
-      scrollPosition = 350.0 * index;
+      scrollPosition = 430.0 * index;
     } else if (index == 4) {
-      scrollPosition = 400.0 * index;
+      scrollPosition = 430.0 * index;
     }
 
     scrollController.animateTo(

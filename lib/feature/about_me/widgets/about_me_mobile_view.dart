@@ -56,7 +56,8 @@ Widget aboutMeMobileView(AboutMeViewModel controller) {
                   ),
                 ),
                 onPressed: () => controller.downloadFile(
-                    AppImage.myResume, "Diwash_rai_resume"),
+                  AppImage.myResume,
+                ),
                 onHover: (isHovered) => controller.onHoveredPressed(isHovered),
               ),
             ),

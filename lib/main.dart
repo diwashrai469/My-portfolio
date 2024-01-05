@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:myportfolio/core/services/local_storage.dart';
 import 'package:myportfolio/feature/home/view/home_view.dart';
 import 'package:myportfolio/firebase_options.dart';
 import 'package:myportfolio/theme/app_theme.dart';
@@ -11,6 +12,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await LocalStorageService.init();
+  LocalStorageService().write(LocalStorageKeys.isAppClosed, "true");
 
   runApp(
     OKToast(

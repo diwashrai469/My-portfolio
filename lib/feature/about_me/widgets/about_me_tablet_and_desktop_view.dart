@@ -65,7 +65,8 @@ Widget aboutMeTabletAndDesktopView(
                           fontSize: AppDimens.headlineFontSizeSmall1),
                     ),
                     onPressed: () => controller.downloadFile(
-                        AppImage.myResume, "diwashrairesume"),
+                      AppImage.myResume,
+                    ),
                   )
                 ],
               )

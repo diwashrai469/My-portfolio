@@ -13,9 +13,15 @@ class IntroductionView extends StatelessWidget {
     Get.put(NavBarViewModel());
     return GetBuilder<NavBarViewModel>(builder: (controller) {
       return ScreenTypeLayout.builder(
-        desktop: (p0) => introTabletAndDesktopView(controller, false),
-        mobile: (p0) => introMobileView(controller),
-        tablet: (p0) => introTabletAndDesktopView(controller, true),
+        desktop: (p0) => AnimatedIntroTabletAndDesktopView(
+            controller: controller, isTabletView: false),
+        mobile: (p0) => AnimatedIntroMobileView(
+          controller: controller,
+        ),
+        tablet: (p0) => AnimatedIntroTabletAndDesktopView(
+          controller: controller,
+          isTabletView: true,
+        ),
       );
     });
   }

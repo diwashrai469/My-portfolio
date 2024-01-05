@@ -3,6 +3,7 @@ import 'package:get_storage/get_storage.dart';
 class LocalStorageKeys {
   static const accessToken = "AccessToken";
   static const refreshToken = "RefreshToken";
+  static const isAppClosed = "isAppClosed";
 }
 
 //use injectable for easier access of this file
