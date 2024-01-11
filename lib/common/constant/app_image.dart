@@ -18,13 +18,13 @@ class AppImage {
   static const String mobileViewMoury = 'assets/mobile_view/moury.PNG';
   static const String mobileViewCrmFront = 'assets/mobile_view/crm_front.PNG';
   static const String platforms = 'assets/mobile_view/platform.PNG';
+  static const String appstore = 'assets/mobile_view/appstore.PNG';
+  static const String playstore = 'assets/mobile_view/playstore.PNG';
 
   //social media
   static String myResume = 'assets/Diwash_Rai.pdf';
   static String linkin = 'https://www.linkedin.com/in/diwash-rai-4336a6235';
   static String github = 'https://github.com/diwashrai469';
-
-
 
 //image height
   static const double llogoHeight = 130;

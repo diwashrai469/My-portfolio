@@ -16,20 +16,19 @@ List projectDetails = [
       image: AppImage.mobileViewChibiHr,
       title: "ChibiHR",
       description:
-          "Your One-Stop Solution for Effortless HR and Workforce Management, Providing an Exceptional Digital Experience on Web and Mobile."),
+          "Exceptional HR and Workforce Management on Web and Mobile."),
   ProjectList(
       image: AppImage.mobileViewCrmFront,
       title: "dynoCRM",
       description:
-          "DynoCRM is a cutting-edge customer relationship management (CRM) solution designed to revolutionize the way businesses manage and nurture their customer relationships."),
+          "DynoCRM revolutionizes customer management with cutting-edge capabilities."),
   ProjectList(
       image: AppImage.mobileViewDynoteams,
       title: "dynoTeam",
-      description:
-          "With dynoTeams, experience the power of custom hierarchy levels for efficient project management. Set and customize hierarchy levels to fit your business needs, enabling better organization and delegation of tasks."),
+      description: "Efficient project management with custom hierarchy."),
   ProjectList(
       image: AppImage.mobileViewMouryMobile,
       title: "Moury",
       description:
-          "Moury lets you chat and make new friends.Nepali social meadai app."),
+          "Moury lets you chat and make new friends. Nepali social media app."),
 ];

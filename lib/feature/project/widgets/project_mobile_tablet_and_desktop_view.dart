@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:myportfolio/common/constant/app_dimens.dart';
@@ -17,14 +18,14 @@ class ProjectMobileTableAndDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 80),
+      padding: const EdgeInsets.only(top: 40),
       child: Column(
         children: [
           Text(
             "Projects Involved",
             style: appTextStyle()?.copyWith(
               fontWeight: AppDimens.lfontweight,
-              fontSize: AppDimens.headlineFontSizeOther,
+              fontSize: AppDimens.headlineFontSizeSmall1,
             ),
           ),
           mHeightSpan,
@@ -32,74 +33,89 @@ class ProjectMobileTableAndDesktopView extends StatelessWidget {
             "Here are the projects I've undertaken throughout my journey in Flutter development",
             textAlign: TextAlign.center,
             style: appTextStyle()?.copyWith(
-                fontSize: AppDimens.headlineFontSizeSSmall, color: darkGrey),
+                fontSize: AppDimens.headlineFontSizeXSmall, color: darkGrey),
           ),
           lHeightSpan,
           projectListCard(),
-          mHeightSpan,
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              AppImage.platforms,
-              height: 200,
-            ),
-          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                AppImage.playstore,
+                height: Get.width / 2.5,
+              ),
+              xsWidthSpan,
+              Image.asset(
+                AppImage.appstore,
+                height: Get.width / 5.9,
+              ),
+            ],
+          )
         ],
       ),
     );
   }
 
   Widget projectListCard() {
-    return SingleChildScrollView(
-      physics: AlwaysScrollableScrollPhysics(),
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: projectDetails
-            .map((data) => Container(
-                  width: Get.width / 4,
-                  height: Get.height / 2.5,
-                  decoration: BoxDecoration(
-                    color: darkGrey,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                        width: Get.width / 9,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              data.title,
-                              style: appTextStyle()?.copyWith(
-                                fontWeight: AppDimens.lfontweight,
-                                color: Colors.white,
-                                fontSize: AppDimens.headlineFontSizeSmall,
-                              ),
+    return CarouselSlider(
+      items: projectDetails
+          .map(
+            (data) => Container(
+              width: Get.width,
+              height: Get.height / 2.5,
+              decoration: BoxDecoration(
+                color: darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    width: Get.width / 3,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            data.title,
+                            style: appTextStyle()?.copyWith(
+                              fontWeight: AppDimens.lfontweight,
+                              color: Colors.white,
+                              fontSize: AppDimens.headlineFontSizeSSmall,
                             ),
-                            mHeightSpan,
-                            Text(
-                              data.description,
-                              style: appTextStyle()?.copyWith(
-                                color: Colors.grey.shade300,
-                                fontSize: AppDimens.headlineFontSizeSSmall,
-                              ),
+                          ),
+                          mHeightSpan,
+                          Text(
+                            data.description,
+                            style: appTextStyle()?.copyWith(
+                              color: Colors.grey.shade300,
+                              fontSize: AppDimens.headlineFontSizeXSmall,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Image.asset(
-                        data.image,
-                        height: 300,
-                      )
-                    ],
+                    ),
                   ),
-                ))
-            .toList(),
+                  Image.asset(
+                    data.image,
+                    height: Get.height / 5,
+                    width: Get.width / 4,
+                  )
+                ],
+              ),
+            ),
+          )
+          .toList(),
+      options: CarouselOptions(
+        height: Get.height / 2.5,
+        enlargeCenterPage: true,
+        autoPlay: true,
+        autoPlayCurve: Curves.fastOutSlowIn,
+        enableInfiniteScroll: true,
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        viewportFraction: 0.8,
       ),
     );
   }
