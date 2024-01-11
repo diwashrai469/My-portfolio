@@ -33,6 +33,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/mobile_view/
 
   fonts:
     - family: Poppins
