@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myportfolio/feature/about_me/about_me_view_model/about_me_view_model.dart';
+import 'package:myportfolio/feature/about_me/view_model/about_me_view_model.dart';
 import 'package:myportfolio/feature/about_me/widgets/about_me_mobile_view.dart';
 import 'package:myportfolio/feature/about_me/widgets/about_me_tablet_and_desktop_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';

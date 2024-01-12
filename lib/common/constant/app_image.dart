@@ -1,5 +1,4 @@
 class AppImage {
-  static const String headphone = 'assets/headphone.png';
   static const String splashWithBackground =
       'assets/splashnamewithBackground.png';
   static const String splashWithoutBackground =
@@ -21,10 +20,22 @@ class AppImage {
   static const String appstore = 'assets/mobile_view/appstore.PNG';
   static const String playstore = 'assets/mobile_view/playstore.PNG';
 
+  //skills
+  static const String flutter = 'assets/skills/flutter.PNG';
+  static const String dart = 'assets/skills/dart.PNG';
+  static const String firebase = 'assets/skills/firebase.PNG';
+  static const String github = 'assets/skills/github.PNG';
+  static const String postman = 'assets/skills/postman.PNG';
+  static const String html = 'assets/skills/html.PNG';
+  static const String css = 'assets/skills/css.PNG';
+  static const String javascript = 'assets/skills/javascript.PNG';
+  static const String react = 'assets/skills/reactjs.PNG';
+  static const String tailwind = 'assets/skills/tailwind.PNG';
+
   //social media
   static String myResume = 'assets/Diwash_Rai.pdf';
-  static String linkin = 'https://www.linkedin.com/in/diwash-rai-4336a6235';
-  static String github = 'https://github.com/diwashrai469';
+  static String linkinUrl = 'https://www.linkedin.com/in/diwash-rai-4336a6235';
+  static String githubUrl = 'https://github.com/diwashrai469';
 
 //image height
   static const double llogoHeight = 130;

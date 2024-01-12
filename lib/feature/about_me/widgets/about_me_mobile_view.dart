@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myportfolio/common/constant/app_dimens.dart';
-import 'package:myportfolio/common/constant/app_image.dart';
 import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'package:myportfolio/common/widgets/k_button.dart';
-import 'package:myportfolio/feature/about_me/about_me_view_model/about_me_view_model.dart';
 import 'package:myportfolio/feature/about_me/constant/about_me_constant.dart';
+import 'package:myportfolio/feature/about_me/view_model/about_me_view_model.dart';
 import 'package:myportfolio/theme/app_theme.dart';
 
 Widget aboutMeMobileView(AboutMeViewModel controller) {
@@ -55,9 +54,7 @@ Widget aboutMeMobileView(AboutMeViewModel controller) {
                     fontSize: AppDimens.headlineFontSizeSmall1,
                   ),
                 ),
-                onPressed: () => controller.downloadFile(
-                  AppImage.myResume,
-                ),
+                onPressed: () async {},
                 onHover: (isHovered) => controller.onHoveredPressed(isHovered),
               ),
             ),

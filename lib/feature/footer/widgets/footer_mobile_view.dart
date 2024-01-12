@@ -21,7 +21,7 @@ Widget footerMobileView() {
           children: [
             GestureDetector(
               onTap: () {
-                html.window.open(AppImage.linkin, "text");
+                html.window.open(AppImage.linkinUrl, "text");
               },
               child: const Icon(
                 FontAwesomeIcons.linkedin,
@@ -31,7 +31,7 @@ Widget footerMobileView() {
             mWidthSpan,
             GestureDetector(
               onTap: () {
-                html.window.open(AppImage.github, "text");
+                html.window.open(AppImage.githubUrl, "text");
               },
               child: const Icon(
                 FontAwesomeIcons.squareGithub,

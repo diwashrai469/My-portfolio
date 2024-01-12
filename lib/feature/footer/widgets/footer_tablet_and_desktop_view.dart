@@ -23,7 +23,7 @@ Widget footerTableAndDesktopView(bool isTabletView) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => html.window.open(AppImage.linkin, "text"),
+              onTap: () => html.window.open(AppImage.linkinUrl, "text"),
               child: Icon(
                 FontAwesomeIcons.linkedin,
                 color: Colors.white,
@@ -32,7 +32,7 @@ Widget footerTableAndDesktopView(bool isTabletView) {
             ),
             mWidthSpan,
             GestureDetector(
-              onTap: () => html.window.open(AppImage.github, "text"),
+              onTap: () => html.window.open(AppImage.githubUrl, "text"),
               child: Icon(
                 FontAwesomeIcons.squareGithub,
                 color: Colors.white,

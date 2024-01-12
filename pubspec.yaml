@@ -22,6 +22,8 @@ dependencies:
   firebase_core: ^2.24.2
   cloud_firestore: ^4.13.6
   carousel_slider: ^4.2.1
+  url_launcher: ^6.2.3
+  firebase_storage: ^11.6.0
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +37,7 @@ flutter:
   assets:
     - assets/
     - assets/mobile_view/
+    - assets/skills/
 
   fonts:
     - family: Poppins
