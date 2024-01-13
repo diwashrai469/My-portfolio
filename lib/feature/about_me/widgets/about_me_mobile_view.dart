@@ -54,7 +54,7 @@ Widget aboutMeMobileView(AboutMeViewModel controller) {
                     fontSize: AppDimens.headlineFontSizeSmall1,
                   ),
                 ),
-                onPressed: () async {},
+                onPressed: () => controller.downloadFile(),
                 onHover: (isHovered) => controller.onHoveredPressed(isHovered),
               ),
             ),

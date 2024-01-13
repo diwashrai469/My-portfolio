@@ -1,6 +1,5 @@
-import 'dart:html';
-
-import 'package:myportfolio/common/constant/app_image.dart';
+import 'dart:html' as html;
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:myportfolio/core/base_model/base_model.dart';
 
 class AboutMeViewModel extends BaseModel {
@@ -12,9 +11,13 @@ class AboutMeViewModel extends BaseModel {
     update();
   }
 
-  downloadFile() {
-    AnchorElement(href: AppImage.myResume)
-      ..setAttribute("download", "Diwash_rai_CV")
-      ..click();
+  downloadFile() async {
+    const String pdfFileName = 'diwashrai.pdf';
+    final firebase_storage.Reference pdfRef =
+        firebase_storage.FirebaseStorage.instance.ref().child(pdfFileName);
+    final String downloadURL = await pdfRef.getDownloadURL();
+    html.AnchorElement anchorElement = html.AnchorElement(href: downloadURL);
+    anchorElement.download = downloadURL;
+    anchorElement.click();
   }
 }
