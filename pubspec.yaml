@@ -36,8 +36,6 @@ flutter:
 
   assets:
     - assets/
-    - assets/mobile_view/
-    - assets/skills/
 
   fonts:
     - family: Poppins

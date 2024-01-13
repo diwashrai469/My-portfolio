@@ -9,28 +9,27 @@ class AppImage {
   static const String myskillLotti = 'assets/myskilllotti.json';
 
   //mobile view
-  static const String mobileViewChibiHr = 'assets/mobile_view/chibihr.PNG';
-  static const String mobileViewCrm = 'assets/mobile_view/crm.PNG';
-  static const String mobileViewDynoteams = 'assets/mobile_view/dynoteams.PNG';
-  static const String mobileViewMouryMobile =
-      'assets/mobile_view/moury_mobile.PNG';
-  static const String mobileViewMoury = 'assets/mobile_view/moury.PNG';
-  static const String mobileViewCrmFront = 'assets/mobile_view/crm_front.PNG';
-  static const String platforms = 'assets/mobile_view/platform.PNG';
-  static const String appstore = 'assets/mobile_view/appstore.PNG';
-  static const String playstore = 'assets/mobile_view/playstore.PNG';
+  static const String mobileViewChibiHr = 'assets/chibihr.PNG';
+  static const String mobileViewCrm = 'assets/crm.PNG';
+  static const String mobileViewDynoteams = 'assets/dynoteams.PNG';
+  static const String mobileViewMouryMobile = 'assets/moury_mobile.PNG';
+  static const String mobileViewMoury = 'assets/moury.PNG';
+  static const String mobileViewCrmFront = 'assets/crm_front.PNG';
+  static const String platforms = 'assets/platform.PNG';
+  static const String appstore = 'assets/appstore.PNG';
+  static const String playstore = 'assets/playstore.PNG';
 
   //skills
-  static const String flutter = 'assets/skills/flutter.PNG';
-  static const String dart = 'assets/skills/dart.PNG';
-  static const String firebase = 'assets/skills/firebase.PNG';
-  static const String github = 'assets/skills/github.PNG';
-  static const String postman = 'assets/skills/postman.PNG';
-  static const String html = 'assets/skills/html.PNG';
-  static const String css = 'assets/skills/css.PNG';
-  static const String javascript = 'assets/skills/javascript.PNG';
-  static const String react = 'assets/skills/reactjs.PNG';
-  static const String tailwind = 'assets/skills/tailwind.PNG';
+  static const String flutter = 'assets/flutter.PNG';
+  static const String dart = 'assets/dart.PNG';
+  static const String firebase = 'assets/firebase.PNG';
+  static const String github = 'assets/github.PNG';
+  static const String postman = 'assets/postman.PNG';
+  static const String html = 'assets/html.PNG';
+  static const String css = 'assets/css.PNG';
+  static const String javascript = 'assets/javascript.PNG';
+  static const String react = 'assets/reactjs.PNG';
+  static const String tailwind = 'assets/tailwind.PNG';
 
   //social media
   static String myResume = 'assets/Diwash_Rai.pdf';
