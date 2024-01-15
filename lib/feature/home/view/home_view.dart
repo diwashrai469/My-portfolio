@@ -43,28 +43,29 @@ class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     Get.put(NavBarViewModel());
 
-    return GetBuilder<NavBarViewModel>(builder: (controller) {
-      return Scaffold(
-        // drawer: navDrawer(),
-        body: Column(
-          children: [
-            const NavBarView(),
-            Expanded(
-              child: ListView(
-                controller: controller.scrollController,
-                children: const [
-                  IntroductionView(),
-                  AboutMeView(),
-                  ProjectView(),
-                  SkillsView(),
-                  ContactMeView(),
-                  FooterView()
-                ],
-              ),
-            )
-          ],
-        ),
-      );
-    });
+    return GetBuilder<NavBarViewModel>(
+      builder: (controller) {
+        return Scaffold(
+          body: Column(
+            children: [
+              const NavBarView(),
+              Expanded(
+                child: ListView(
+                  controller: controller.scrollController,
+                  children: const [
+                    IntroductionView(),
+                    AboutMeView(),
+                    ProjectView(),
+                    SkillsView(),
+                    ContactMeView(),
+                    FooterView()
+                  ],
+                ),
+              )
+            ],
+          ),
+        );
+      },
+    );
   }
 }

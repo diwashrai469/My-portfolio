@@ -6,6 +6,8 @@ import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'dart:html' as html;
 
+import 'package:myportfolio/feature/footer/constant/footer_constant.dart';
+
 Widget footerTableAndDesktopView(bool isTabletView) {
   return Container(
     padding: const EdgeInsets.all(10),
@@ -13,7 +15,7 @@ Widget footerTableAndDesktopView(bool isTabletView) {
     child: Column(
       children: [
         Text(
-          "Follow Me",
+          followMe,
           style: appTextStyle()?.copyWith(
               color: Colors.white,
               fontSize: isTabletView ? null : AppDimens.headlineFontSizeSSmall),
@@ -43,7 +45,7 @@ Widget footerTableAndDesktopView(bool isTabletView) {
         ),
         sHeightSpan,
         Text(
-          "Made with Flutter and Firebase",
+          madeWith,
           style: appTextStyle()?.copyWith(color: Colors.grey.shade500),
         ),
       ],

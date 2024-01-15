@@ -5,6 +5,8 @@ import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
 import 'dart:html' as html;
 
+import 'package:myportfolio/feature/footer/constant/footer_constant.dart';
+
 Widget footerMobileView() {
   return Container(
     padding: const EdgeInsets.all(10),
@@ -12,7 +14,7 @@ Widget footerMobileView() {
     child: Column(
       children: [
         Text(
-          "Follow Me",
+          followMe,
           style: appTextStyle()?.copyWith(color: Colors.white),
         ),
         sHeightSpan,
@@ -20,9 +22,7 @@ Widget footerMobileView() {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {
-                html.window.open(AppImage.linkinUrl, "text");
-              },
+              onTap: () => html.window.open(AppImage.linkinUrl, "text"),
               child: const Icon(
                 FontAwesomeIcons.linkedin,
                 color: Colors.white,
@@ -30,9 +30,7 @@ Widget footerMobileView() {
             ),
             mWidthSpan,
             GestureDetector(
-              onTap: () {
-                html.window.open(AppImage.githubUrl, "text");
-              },
+              onTap: () => html.window.open(AppImage.githubUrl, "text"),
               child: const Icon(
                 FontAwesomeIcons.squareGithub,
                 color: Colors.white,
@@ -42,7 +40,7 @@ Widget footerMobileView() {
         ),
         sHeightSpan,
         Text(
-          "Made with Flutter and Firebase",
+          madeWith,
           style: appTextStyle()?.copyWith(color: Colors.grey.shade500),
         ),
       ],

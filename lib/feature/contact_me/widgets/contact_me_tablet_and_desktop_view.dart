@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/common/constant/app_dimens.dart';
 import 'package:myportfolio/common/constant/ui_helpers.dart';
 import 'package:myportfolio/common/utils/app_text_style.dart';
-import 'package:myportfolio/feature/contact_me/common_widget/common_widget.dart';
+import 'package:myportfolio/feature/contact_me/widgets/contact_me_form_field.dart';
 import 'package:myportfolio/feature/contact_me/constant/contact_me_constant.dart';
 import 'package:myportfolio/feature/contact_me/view_model/contact_view_model.dart';
 

@@ -9,30 +9,29 @@ class AppImage {
   static const String myskillLotti = 'assets/myskilllotti.json';
 
   //mobile view
-  static const String mobileViewChibiHr = 'assets/chibihr.PNG';
-  static const String mobileViewCrm = 'assets/crm.PNG';
-  static const String mobileViewDynoteams = 'assets/dynoteams.PNG';
-  static const String mobileViewMouryMobile = 'assets/moury_mobile.PNG';
-  static const String mobileViewMoury = 'assets/moury.PNG';
-  static const String mobileViewCrmFront = 'assets/crm_front.PNG';
-  static const String platforms = 'assets/platform.PNG';
-  static const String appstore = 'assets/appstore.PNG';
-  static const String playstore = 'assets/playstore.PNG';
+  static const String mobileViewChibiHr = 'assets/chibihr.png';
+  static const String mobileViewCrm = 'assets/crm.png';
+  static const String mobileViewDynoteams = 'assets/dynoteams.png';
+  static const String mobileViewMouryMobile = 'assets/moury_mobile.png';
+  static const String mobileViewMoury = 'assets/moury.png';
+  static const String mobileViewCrmFront = 'assets/crm_front.png';
+  static const String platforms = 'assets/platform.png';
+  static const String appstore = 'assets/appstore.png';
+  static const String playstore = 'assets/playstore.png';
 
   //skills
-  static const String flutter = 'assets/flutter.PNG';
-  static const String dart = 'assets/dart.PNG';
-  static const String firebase = 'assets/firebase.PNG';
-  static const String github = 'assets/github.PNG';
-  static const String postman = 'assets/postman.PNG';
-  static const String html = 'assets/html.PNG';
-  static const String css = 'assets/css.PNG';
-  static const String javascript = 'assets/javascript.PNG';
-  static const String react = 'assets/reactjs.PNG';
-  static const String tailwind = 'assets/tailwind.PNG';
+  static const String flutter = 'assets/flutter.png';
+  static const String dart = 'assets/dart.png';
+  static const String firebase = 'assets/firebase.png';
+  static const String github = 'assets/github.png';
+  static const String postman = 'assets/postman.png';
+  static const String html = 'assets/html.png';
+  static const String css = 'assets/css.png';
+  static const String javascript = 'assets/javascript.png';
+  static const String react = 'assets/reactjs.png';
+  static const String tailwind = 'assets/tailwind.png';
 
   //social media
-  static String myResume = 'assets/Diwash_Rai.pdf';
   static String linkinUrl = 'https://www.linkedin.com/in/diwash-rai-4336a6235';
   static String githubUrl = 'https://github.com/diwashrai469';
 
