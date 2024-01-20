@@ -2,7 +2,7 @@ class AppImage {
   static const String splashWithBackground =
       'assets/splashnamewithBackground.png';
   static const String splashWithoutBackground =
-      'assets/splashnamewithoutBackground.png';
+      'assets/splashnamewithoutbackGround.png';
   static const String lottiAnimationForImage = 'assets/imageLotti.json';
   static const String aboutMe = 'assets/about_me.png';
   static const String myImage = 'assets/myimage-removebg.png';

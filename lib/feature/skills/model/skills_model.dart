@@ -18,6 +18,6 @@ List skillsList = [
   SkillsList(image: AppImage.html, title: "HTML"),
   SkillsList(image: AppImage.css, title: "CSS"),
   SkillsList(image: AppImage.javascript, title: "javascript"),
-  SkillsList(image: AppImage.react, title: "React.js"),
-  SkillsList(image: AppImage.tailwind, title: "Tailwind"),
+  // SkillsList(image: AppImage.react, title: "React.js"),
+  // SkillsList(image: AppImage.tailwind, title: "Tailwind"),
 ];
