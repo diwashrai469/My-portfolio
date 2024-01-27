@@ -18,9 +18,8 @@ class ProjectViewModel extends BaseModel {
           "https://play.google.com/store/apps/details?id=com.chibihr.app&hl=en&gl=US",
           "text");
     } else if (index == 1) {
-      html.window.open(
-          "https://play.google.com/store/apps/details?id=com.dynocrm.dynocrm_lite&hl=en&gl=US",
-          "text");
+      html.window
+          .open("https://apps.apple.com/us/app/dynocrm/id1637488541", "text");
     } else if (index == 2) {
       html.window
           .open("https://apps.apple.com/be/app/dynoteams/id6448953562", "text");
