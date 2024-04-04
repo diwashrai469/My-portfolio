@@ -26,9 +26,9 @@ List projectDetails = [
       image: AppImage.mobileViewDynoteams,
       title: "dynoTeam",
       description: "Efficient project management with custom hierarchy."),
-  ProjectList(
-      image: AppImage.mobileViewMouryMobile,
-      title: "Moury",
-      description:
-          "Moury lets you chat and make new friends. Nepali social media app."),
+  // ProjectList(
+  //     image: AppImage.mobileViewMouryMobile,
+  //     title: "Moury",
+  //     description:
+  //         "Moury lets you chat and make new friends. Nepali social media app."),
 ];

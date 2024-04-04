@@ -19,12 +19,10 @@ class ProjectViewModel extends BaseModel {
           "text");
     } else if (index == 1) {
       html.window
-          .open("https://apps.apple.com/us/app/dynocrm/id1637488541", "text");
-    } else if (index == 2) {
+          .open("https://apps.apple.com/np/app/dynocrm/id1637488541", "text");
+    } else {
       html.window
           .open("https://apps.apple.com/be/app/dynoteams/id6448953562", "text");
-    } else {
-      html.window.open("https://www.moury.app/", "text");
     }
   }
 }
